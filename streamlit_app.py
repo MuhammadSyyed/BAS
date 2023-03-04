@@ -44,3 +44,5 @@ def mark(id):
             return {"id": id, "arrival-marked": True}
     except:
         return {"error": "invalid id"}
+if __name__=="__main__":
+    app.run(debug=True)
