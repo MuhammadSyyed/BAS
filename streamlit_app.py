@@ -2,6 +2,7 @@ from flask import Flask
 import time
 from datetime import datetime
 from flask import Flask, render_template, request
+import os
 from database_func import check_arrival, mark_attendance, mark_departure, get_student_data_by_id,get_presents,get_absents
 
 app = Flask(__name__)
@@ -44,5 +45,5 @@ def mark(id):
             return {"id": id, "arrival-marked": True}
     except:
         return {"error": "invalid id"}
-# if __name__=="__main__":
-#     app.run(debug=True)
+if __name__=="__main__":
+    os.sys("flask run")
